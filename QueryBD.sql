@@ -11,12 +11,13 @@ autor varchar(100) not null,
 nro_paginas int not null,
 stock int not null
 CONSTRAINT PK_Libros PRIMARY KEY (isbn));
-
+GO
 
 CREATE TABLE Formas_Pagos(
 id_forma_pago int IDENTITY(1,1),
 forma_pago varchar(100) not null
 CONSTRAINT PK_Formas_Pagos PRIMARY KEY (id_forma_pago));
+GO
 
 CREATE TABLE Facturas(
 nro_factura int IDENTITY(1,1),
@@ -26,6 +27,7 @@ cliente varchar(100)
 CONSTRAINT PK_Facturas PRIMARY KEY (nro_factura),
 CONSTRAINT FK_Facturas_Formas_Pagos FOREIGN KEY (id_forma_pago)
 REFERENCES Formas_Pagos (id_forma_pago));
+GO
 
 CREATE TABLE Detalles_Facturas(
 id_detalle_factura int IDENTITY(1,1),
@@ -37,6 +39,7 @@ CONSTRAINT FK_Detalles_Facturas_Libros FOREIGN KEY (isbn)
 REFERENCES Libros (isbn),
 CONSTRAINT FK_Detalles_Facturas_Facturas FOREIGN KEY (nro_factura)
 REFERENCES Facturas (nro_factura));
+GO
 
 INSERT INTO Formas_Pagos (forma_pago)
 VALUES ('Debito'),
@@ -49,6 +52,7 @@ AS
 BEGIN
     SELECT * FROM Libros
 END
+GO
 
 CREATE PROCEDURE OBTENER_LIBRO_X_ISBN
 @isbn varchar(50)
@@ -57,9 +61,10 @@ BEGIN
     SELECT * FROM Libros
 	WHERE isbn LIKE '%@isbn%'
 END
+GO
 
 CREATE PROCEDURE MODIFICAR_LIBROS
-@isbn varchar(50),
+@isbn varchar(50) = '',
 @titulo varchar(100),
 @autor varchar(100),
 @nro_paginas int,
@@ -78,6 +83,7 @@ BEGIN
 	    WHERE isbn = @isbn
     END
 END
+GO
 
 CREATE PROCEDURE ELIMINAR_LIBRO
 @isbn varchar(50)
@@ -86,12 +92,62 @@ BEGIN
     DELETE Libros
 	WHERE isbn = @isbn
 END	 
+GO
 
 CREATE PROCEDURE OBTENER_FACTURAS
+AS
+BEGIN 
+    SELECT * FROM Facturas
+END
+GO
 
 CREATE PROCEDURE OBTENER_FACTURA_X_ID
-
-CREATE PROCEDURE MODIFICAR_FACTURAS
+@nro_factura int
 AS
 BEGIN
-    INSERT INTO
+    SELECT * FROM Facturas WHERE nro_factura = @nro_factura
+END
+GO
+
+CREATE PROCEDURE MODIFICAR_FACTURAS
+@nro_factura int = 0,
+@fecha date, 
+@id_forma_pago int,
+@cliente varchar(100)
+AS
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM Facturas WHERE nro_factura = @nro_factura)
+	BEGIN
+	    INSERT INTO Facturas (fecha, id_forma_pago, cliente)
+	    VALUES (@fecha, @id_forma_pago, @cliente)
+	END
+	ELSE
+	BEGIN
+	    UPDATE Facturas
+		SET fecha = @fecha, id_forma_pago = @id_forma_pago, cliente = @cliente
+		WHERE nro_factura = @nro_factura
+	END
+END	
+GO
+
+CREATE PROCEDURE AGREGAR_DETALLE
+@isbn varchar(50),
+@cantidad int,
+@nro_factura int
+AS
+BEGIN 
+    INSERT INTO Detalles_Facturas (isbn, cantidad, nro_factura)
+	VALUES (@isbn, @cantidad, @nro_factura)
+END
+GO
+
+CREATE PROCEDURE ELIMINAR_FACTURA
+@nro_factura int
+AS
+BEGIN 
+    DELETE Detalles_Facturas
+	WHERE nro_factura = @nro_factura
+	DELETE Facturas 
+	WHERE nro_factura = @nro_factura
+END
+GO
