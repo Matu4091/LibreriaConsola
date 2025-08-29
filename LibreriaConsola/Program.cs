@@ -1,9 +1,12 @@
 ﻿using LibreriaConsola.domain;
 using LibreriaConsola.services;
 
+Payment_MethodService paymentMethodServ = new Payment_MethodService();
 BookService bookServ = new BookService();
 List<Book>? books;
-
+List<Payment_Method>? paymentMethods = paymentMethodServ.BringPaymentMethods();
+UnitOfWork unitOfWork = new UnitOfWork();
+     
 Book book = new Book
 {
     Isbn = "123-42",
@@ -14,6 +17,51 @@ Book book = new Book
 };
 
 if (bookServ.InsertBook(book))
+{
+    Console.WriteLine("Book Added Succesfully");
+}
+else { Console.WriteLine("Error Adding the Book"); }
+
+Book book2 = new Book
+{
+    Isbn = "1234567890",
+    Title = "C# Básico",
+    Author = "Autor A",
+    Pags_Number = 300,
+    Stock = 10
+};
+
+if (bookServ.InsertBook(book2))
+{
+    Console.WriteLine("Book Added Succesfully");
+}
+else { Console.WriteLine("Error Adding the Book"); }
+
+Book book3 = new Book
+{
+    Isbn = "0987654321",
+    Title = "Bases de Datos",
+    Author = "Autor B",
+    Pags_Number = 400,
+    Stock = 5
+};
+
+if (bookServ.InsertBook(book3))
+{
+    Console.WriteLine("Book Added Succesfully");
+}
+else { Console.WriteLine("Error Adding the Book"); }
+
+Book book4 = new Book
+{
+    Isbn = "1122334455",
+    Title = "Programación Avanzada",
+    Author = "Autor C",
+    Pags_Number = 500,
+    Stock = 7
+};
+
+if (bookServ.InsertBook(book4))
 {
     Console.WriteLine("Book Added Succesfully");
 }
@@ -39,7 +87,7 @@ else
 book = new Book
 {
     Isbn = "123-42",
-    Title = "Tu vieja xd",
+    Title = "un libro xd",
     Author = "Matute",
     Pags_Number = 100,
     Stock = 5
@@ -56,3 +104,52 @@ if (bookServ.DeleteBook("123-42"))
     Console.WriteLine("Book Deleted Succesfully");
 }
 else { Console.WriteLine("Error Deleting the Book"); }
+
+Invoice invoice1 = new Invoice
+{
+    Number = 0, 
+    Date = DateTime.Today,
+    Client = "Juan Pérez",
+    Payment_Method = paymentMethods[2],
+    ListDetails = new List<Invoice_Details>()
+        {
+            new Invoice_Details
+            {
+                Book = new Book { Isbn = "1234567890", Title = "C# Básico", Author = "Autor A", Pags_Number = 300, Stock = 10 },
+                Amount = 2
+            },
+            new Invoice_Details
+            {
+                Book = new Book { Isbn = "0987654321", Title = "Bases de Datos", Author = "Autor B", Pags_Number = 400, Stock = 5 },
+                Amount = 1
+            }
+        }
+};
+
+if (unitOfWork.SaveInvoiceWithDetails(invoice1))
+{
+    Console.WriteLine("Invoice Saved, Number: " + invoice1.Number);
+}
+else { Console.WriteLine("Error Saving the Invoice Number: " + invoice1.Number); }
+
+Invoice invoice2 = new Invoice
+{
+    Number = 0,
+    Date = DateTime.Today.AddDays(-10),
+    Client = "Ana Gómez",
+    Payment_Method = paymentMethods[0],
+    ListDetails = new List<Invoice_Details>()
+        {
+            new Invoice_Details
+            {
+                Book = new Book { Isbn = "1122334455", Title = "Programación Avanzada", Author = "Autor C", Pags_Number = 500, Stock = 7 },
+                Amount = 3
+            }
+        }
+};
+
+if (unitOfWork.SaveInvoiceWithDetails(invoice2))
+{
+    Console.WriteLine("Invoice Saved, Number: " + invoice2.Number);
+}
+else { Console.WriteLine("Error Saving the Invoice Number: " + invoice2.Number); }

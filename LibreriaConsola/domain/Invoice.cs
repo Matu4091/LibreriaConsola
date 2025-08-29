@@ -12,7 +12,7 @@ namespace LibreriaConsola.domain
         public DateTime Date { get; set; }
         public Payment_Method Payment_Method { get; set; }
         public string Client { get; set; }
-        public List<Invoice_Details> ListDetails { get; set; }
+        public List<Invoice_Details>? ListDetails { get; set; }
 
         public Invoice()
         {

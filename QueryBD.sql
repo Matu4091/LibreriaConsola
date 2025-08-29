@@ -46,6 +46,7 @@ VALUES ('Debito'),
        ('Credito'),
        ('Efectivo'),
        ('Transferencia');
+GO
 
 CREATE PROCEDURE OBTENER_LIBROS
 AS
@@ -59,7 +60,7 @@ CREATE PROCEDURE OBTENER_LIBRO_X_ISBN
 AS
 BEGIN
     SELECT * FROM Libros
-	WHERE isbn LIKE '%@isbn%'
+	WHERE isbn LIKE '%' + @isbn + '%'
 END
 GO
 
@@ -97,7 +98,8 @@ GO
 CREATE PROCEDURE OBTENER_FACTURAS
 AS
 BEGIN 
-    SELECT * FROM Facturas
+    SELECT * FROM Facturas f
+    JOIN Formas_Pagos fp ON fp.id_forma_pago = f.id_forma_pago
 END
 GO
 
@@ -149,5 +151,29 @@ BEGIN
 	WHERE nro_factura = @nro_factura
 	DELETE Facturas 
 	WHERE nro_factura = @nro_factura
+END
+GO
+
+CREATE PROCEDURE OBTENER_METODOS_PAGOS
+AS
+BEGIN
+    SELECT * FROM Formas_Pagos
+END
+GO
+
+CREATE PROCEDURE OBTENER_DETALLES_FACTURAS
+@nro_factura int
+AS
+BEGIN
+    SELECT * FROM Detalles_Facturas df
+    JOIN Libros l ON l.isbn = df.isbn
+    WHERE df.nro_factura = @nro_factura
+END
+GO
+
+CREATE PROCEDURE OBTENER_ULTIMA_FACTURA
+AS
+BEGIN
+    SELECT TOP 1 nro_factura FROM Facturas ORDER BY nro_factura DESC
 END
 GO

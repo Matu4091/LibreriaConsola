@@ -10,11 +10,13 @@ namespace LibreriaConsola.data
     {
         public string Name { get; set; }
         public object Value { get; set; }
+        public bool isOutput { get; set; }
 
-        public Parameter(string Name, object Value)
+        public Parameter(string Name, object Value, bool isOutput = false)
         {
             this.Name = Name;
             this.Value = Value;
+            this.isOutput = isOutput;
         }
     }
 }
