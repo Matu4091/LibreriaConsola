@@ -8,5 +8,13 @@ namespace LibreriaConsola.data
 {
     internal class Parameter
     {
+        public string Name { get; set; }
+        public object Value { get; set; }
+
+        public Parameter(string Name, object Value)
+        {
+            this.Name = Name;
+            this.Value = Value;
+        }
     }
 }

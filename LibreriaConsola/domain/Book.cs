@@ -31,5 +31,10 @@ namespace LibreriaConsola.domain
             this.Pags_Number = Pags_Number;
             this.Stock = Stock;
         }
+
+        public override string ToString()
+        {
+            return "ISBN: " + Isbn + " |Title: " + Title + " |Author: " + Author;
+        }
     }
 }

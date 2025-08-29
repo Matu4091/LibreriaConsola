@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace LibreriaConsola.data
 {
-    internal interface IRepository
+    internal interface IRepository<T,D>
     {
-        List<object> GetAll();
-        object GetById(int id);
-        bool Save(object obj);
-        bool Delete(int id);
+        List<T>? GetAll();
+        T? GetById(D id);
+        bool Save(T entity);
+        bool Delete(D entity);
     }
 }
