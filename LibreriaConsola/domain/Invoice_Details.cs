@@ -26,5 +26,10 @@ namespace LibreriaConsola.domain
             this.Amount = Amount;
             this.Invoice_Number = Invoice_Number;
         }
+
+        public override string ToString()
+        {
+            return "Book: " + Book + " - Amount: " + Amount;
+        }
     }
 }

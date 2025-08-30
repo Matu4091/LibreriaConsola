@@ -5,12 +5,13 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace LibreriaConsola.data
 {
     internal class Invoice_DetailsRepository
     {
-        public bool Delete(int entity)
+        public bool Delete(int invoiceNumber)
         {
             throw new NotImplementedException();
         }
@@ -63,7 +64,9 @@ namespace LibreriaConsola.data
                     p.Add(new Parameter("@cantidad", i.Amount));
                     p.Add(new Parameter("@nro_factura", i.Invoice_Number));
 
-                    rowAffected += DataHelper.GetInstance().ExecuteSPModify(sp, p);
+                    var (AffectedRows, newId) = DataHelper.GetInstance().ExecuteSPModify(sp, p);
+
+                    rowAffected += AffectedRows;
                 }               
 
                 return rowAffected == details.Count;

@@ -57,9 +57,11 @@ namespace LibreriaConsola.data
             return dt;
         }
 
-        public int ExecuteSPModify(string sp, List<Parameter> parameters)
+        public (int affectedRows, int output) ExecuteSPModify(string sp, List<Parameter> parameters)
         {
-            int affectedRows;
+            int affectedRows = 0;
+            int output = 0;
+            SqlParameter? outputParam = null;
 
             using (SqlConnection conn = new SqlConnection(_connString))
             {
@@ -75,21 +77,35 @@ namespace LibreriaConsola.data
                         {
                             foreach (Parameter p in parameters)
                             {
-                                cmd.Parameters.AddWithValue(p.Name, p.Value);
+                                if (p.isOutput)
+                                {
+                                    outputParam = new SqlParameter(p.Name, SqlDbType.Int);
+                                    outputParam.Direction = ParameterDirection.Output;
+                                    cmd.Parameters.Add(outputParam);
+                                }
+                                else
+                                {
+                                    cmd.Parameters.AddWithValue(p.Name, p.Value);
+                                }
                             }
                         }
 
                         affectedRows = cmd.ExecuteNonQuery();
+
+                        if (outputParam != null && outputParam.Value != DBNull.Value)
+                        {
+                            output = Convert.ToInt32(outputParam.Value);
+                        }
                     }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Error With the Data Base: " + ex.Message);
                     throw;
-                }
-
-                return affectedRows;
+                }              
             }
+
+            return (affectedRows, output);
         }
     }
 }

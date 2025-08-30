@@ -31,5 +31,10 @@ namespace LibreriaConsola.domain
             this.Client = Client;
             this.ListDetails = ListDetails;
         }
+
+        public override string ToString()
+        {
+            return "Number: " + Number + " |Date: " + Date + " |Payment Method: " + Payment_Method.Description + " |Client: " + Client;
+        }
     }
 }

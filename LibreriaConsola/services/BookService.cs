@@ -60,11 +60,11 @@ namespace LibreriaConsola.services
             }
         }
 
-        public bool DeleteBook(string isbn)
+        public bool DeleteBook(Book b)
         {
-            if (!ValidateExisting(isbn))
+            if (!ValidateExisting(b.Isbn))
             {
-                return BookRepo.Delete(isbn);
+                return BookRepo.Delete(b.Isbn);
             }
             else
             {

@@ -23,19 +23,35 @@ namespace LibreriaConsola.services
         {
             if (!invoiceRepo.Save(i)) { return false; }
 
-            foreach(Invoice_Details detail in i.ListDetails)
-            {
-                detail.Invoice_Number = i.Number;
-            }
-
             if (i.ListDetails != null && i.ListDetails.Count > 0)
             {
-                return invoiceDetailsRepo.Save(i.ListDetails);
+                foreach (Invoice_Details detail in i.ListDetails)
+                {
+                    detail.Invoice_Number = i.Number;
+                }
+                if (i.ListDetails != null && i.ListDetails.Count > 0)
+                {
+                    return invoiceDetailsRepo.Save(i.ListDetails);
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
-                return false;
+                return true;
             }
+        }
+
+        public List<Invoice>? BringAllInvoices()
+        {
+            return invoiceRepo.GetAll();
+        }
+
+        public bool DeleteInvoiceWithDetails(Invoice i)
+        {
+            return invoiceRepo.Delete(i.Number);
         }
     }
 }

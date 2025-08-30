@@ -18,9 +18,16 @@ namespace LibreriaConsola.data
             InvoiceDetailsRepo = new Invoice_DetailsRepository();
         }
 
-        public bool Delete(int entity)
+        public bool Delete(int invoiceNumber)
         {
-            throw new NotImplementedException();
+            List<Parameter> p = new List<Parameter>();
+            p.Add(new Parameter("@nro_factura", invoiceNumber));
+
+            if (DataHelper.GetInstance().ExecuteSPModify("ELIMINAR_FACTURA", p).affectedRows > 0)
+            {
+                return true;
+            }
+            else { return false; }
         }
 
         public List<Invoice>? GetAll()
@@ -54,23 +61,28 @@ namespace LibreriaConsola.data
         public bool Save(Invoice i)
         {
             List<Parameter> p = new List<Parameter>();
-
-            Parameter param = new Parameter("@nro_factura", i.Number, true);
-            p.Add(param);
+           
+            p.Add(new Parameter("@nro_factura", i.Number));
             p.Add(new Parameter("@fecha", i.Date));
             p.Add(new Parameter("@id_forma_pago", i.Payment_Method.Id));
             p.Add(new Parameter("@cliente", i.Client));
+            p.Add(new Parameter("@new_id", 0, true));
 
-            bool result = DataHelper.GetInstance().ExecuteSPModify("MODIFICAR_FACTURAS", p) > 0;
+            var (affectedRows, newId) = DataHelper.GetInstance().ExecuteSPModify("MODIFICAR_FACTURAS", p);
 
-            if (result)
+            if (newId > 0)
             {
-                DataTable dt = DataHelper.GetInstance().ExecuteSPRead("OBTENER_ULTIMA_FACTURA");
-
-                i.Number = Convert.ToInt32(dt.Rows[0][0]);
+                i.Number = newId;
             }
 
-            return result;
+            if (affectedRows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

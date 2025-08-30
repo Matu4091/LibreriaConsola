@@ -115,19 +115,24 @@ CREATE PROCEDURE MODIFICAR_FACTURAS
 @nro_factura int = 0,
 @fecha date, 
 @id_forma_pago int,
-@cliente varchar(100)
+@cliente varchar(100),
+@new_id int OUTPUT
 AS
 BEGIN
     IF NOT EXISTS (SELECT 1 FROM Facturas WHERE nro_factura = @nro_factura)
 	BEGIN
 	    INSERT INTO Facturas (fecha, id_forma_pago, cliente)
 	    VALUES (@fecha, @id_forma_pago, @cliente)
+
+		SET @new_id = SCOPE_IDENTITY()
 	END
 	ELSE
 	BEGIN
 	    UPDATE Facturas
 		SET fecha = @fecha, id_forma_pago = @id_forma_pago, cliente = @cliente
 		WHERE nro_factura = @nro_factura
+
+		SET @new_id = @nro_factura
 	END
 END	
 GO

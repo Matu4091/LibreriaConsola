@@ -74,7 +74,7 @@ if (books != null && books.Count > 0)
     Console.WriteLine("//LIST OF BOOKS//");
     foreach (Book b in books)
     {
-        Console.WriteLine("-");
+        Console.WriteLine("-----");
         Console.WriteLine(b.ToString());
     }
     Console.WriteLine("///////////////");
@@ -99,7 +99,7 @@ if (bookServ.UpdateBook(book))
 }
 else { Console.WriteLine("Error Updating the Book"); }
 
-if (bookServ.DeleteBook("123-42"))
+if (bookServ.DeleteBook(book))
 {
     Console.WriteLine("Book Deleted Succesfully");
 }
@@ -153,3 +153,58 @@ if (unitOfWork.SaveInvoiceWithDetails(invoice2))
     Console.WriteLine("Invoice Saved, Number: " + invoice2.Number);
 }
 else { Console.WriteLine("Error Saving the Invoice Number: " + invoice2.Number); }
+
+
+List<Invoice>? invoices = unitOfWork.BringAllInvoices();
+
+if (invoices != null && invoices.Count > 0)
+{
+    Console.WriteLine("//LIST OF INVOICES//");
+    foreach (Invoice i in invoices)
+    {
+        Console.WriteLine("-----");
+        Console.WriteLine(i.ToString());
+        Console.WriteLine("\n|- Details -|:");
+        if (i.ListDetails != null && i.ListDetails.Count > 0)
+        {
+            foreach (Invoice_Details detail in i.ListDetails)
+            {
+                Console.WriteLine("-");
+                Console.WriteLine(detail.ToString());
+            }
+        }
+    }
+    Console.WriteLine("///////////////");
+}
+else
+{
+    Console.WriteLine("There are not Books Registered");
+}
+
+if (unitOfWork.DeleteInvoiceWithDetails(invoice1))
+{
+    Console.WriteLine("Invoice Deleted Succesfully");
+}
+else { Console.WriteLine("Error Deleting the Invoice"); }
+
+if (unitOfWork.DeleteInvoiceWithDetails(invoice2))
+{
+    Console.WriteLine("Invoice Deleted Succesfully");
+}
+else { Console.WriteLine("Error Deleting the Invoice"); }
+
+if (bookServ.DeleteBook(book2))
+{
+    Console.WriteLine("Book Deleted Succesfully");
+}
+else { Console.WriteLine("Error Deleting the Book"); }
+if (bookServ.DeleteBook(book3))
+{
+    Console.WriteLine("Book Deleted Succesfully");
+}
+else { Console.WriteLine("Error Deleting the Book"); }
+if (bookServ.DeleteBook(book4))
+{
+    Console.WriteLine("Book Deleted Succesfully");
+}
+else { Console.WriteLine("Error Deleting the Book"); }

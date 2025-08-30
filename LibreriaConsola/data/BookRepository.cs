@@ -15,7 +15,9 @@ namespace LibreriaConsola.data
             List<Parameter> parameters = new List<Parameter>();
             parameters.Add(new Parameter("@isbn", isbn));
 
-            if (DataHelper.GetInstance().ExecuteSPModify("ELIMINAR_LIBRO", parameters) > 0)
+            var (affectedRows, newId) = DataHelper.GetInstance().ExecuteSPModify("ELIMINAR_LIBRO", parameters);
+
+            if (affectedRows > 0)
             {
                 return true;
             }
@@ -91,7 +93,9 @@ namespace LibreriaConsola.data
             parameters.Add(new Parameter("@nro_paginas", book.Pags_Number));
             parameters.Add(new Parameter("@stock", book.Stock));
 
-            if (DataHelper.GetInstance().ExecuteSPModify("MODIFICAR_LIBROS", parameters) > 0)
+            var (affectedRows, newId) = DataHelper.GetInstance().ExecuteSPModify("MODIFICAR_LIBROS", parameters);
+
+            if (affectedRows > 0)
             {
                 return true;
             }
