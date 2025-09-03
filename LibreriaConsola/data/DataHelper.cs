@@ -11,12 +11,13 @@ namespace LibreriaConsola.data
     internal class DataHelper
     {
         private static DataHelper? _instance;
-        private string _connString;
+        SqlConnection _conn;
+        SqlTransaction? _transaction;
 
         private DataHelper()
         {
-            _connString = Properties.Resources.ConnectionChain;
-        }
+            _conn = new SqlConnection(Properties.Resources.ConnectionChain);
+        }     
 
         public static DataHelper GetInstance()
         {
@@ -27,33 +28,66 @@ namespace LibreriaConsola.data
             return _instance;
         }
 
+        public void BeginTransaction()
+        {
+            if (_conn.State != ConnectionState.Open) { _conn.Open(); }
+            _transaction = _conn.BeginTransaction();
+        }
+
+        public void Commit()
+        {
+            if (_transaction != null)
+            {
+                _transaction.Commit();
+            }
+        }
+
+        public void RollBack()
+        {
+            if (_transaction != null)
+            {
+                _transaction.Rollback();
+            }
+        }
+
+        public void Cleanup()
+        {
+            _transaction = null;
+            if (_conn.State == ConnectionState.Open)
+            {
+                _conn.Close();
+            }
+        }
+
         public DataTable ExecuteSPRead(string sp, Parameter? p = null)
         {
             DataTable dt = new DataTable();
-
-            using (SqlConnection conn = new SqlConnection(_connString))
+           
+            try
             {
-                try
-                {
-                    conn.Open();
+                if (_conn.State != ConnectionState.Open) { _conn.Open(); }
 
-                    using (SqlCommand cmd = new SqlCommand(sp, conn))
+                using (SqlCommand cmd = new SqlCommand(sp, _conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    if (p != null)
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        if (p != null)
-                        {
-                            cmd.Parameters.AddWithValue(p.Name, p.Value);
-                        }
-
-                        dt.Load(cmd.ExecuteReader());
+                        cmd.Parameters.AddWithValue(p.Name, p.Value);
                     }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error With the Data Base: " + ex.Message);
-                    throw;
+
+                    dt.Load(cmd.ExecuteReader());
                 }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error With the Data Base: " + ex.Message);
+                throw;
+            }
+            finally
+            {
+                if (_transaction == null) { _conn.Close(); }
+            }
+            
             return dt;
         }
 
@@ -62,48 +96,51 @@ namespace LibreriaConsola.data
             int affectedRows = 0;
             int output = 0;
             SqlParameter? outputParam = null;
-
-            using (SqlConnection conn = new SqlConnection(_connString))
+            
+            try
             {
-                try
+                if (_conn.State != ConnectionState.Open) { _conn.Open(); }
+
+                using (SqlCommand cmd = new SqlCommand(sp, _conn))
                 {
-                    conn.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
 
-                    using (SqlCommand cmd = new SqlCommand(sp, conn))
+                    if (_transaction != null) { cmd.Transaction = _transaction; }
+
+                    if (parameters != null && parameters.Count > 0)
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
-
-                        if (parameters != null && parameters.Count > 0)
+                        foreach (Parameter p in parameters)
                         {
-                            foreach (Parameter p in parameters)
+                            if (p.isOutput)
                             {
-                                if (p.isOutput)
-                                {
-                                    outputParam = new SqlParameter(p.Name, SqlDbType.Int);
-                                    outputParam.Direction = ParameterDirection.Output;
-                                    cmd.Parameters.Add(outputParam);
-                                }
-                                else
-                                {
-                                    cmd.Parameters.AddWithValue(p.Name, p.Value);
-                                }
+                                outputParam = new SqlParameter(p.Name, SqlDbType.Int);
+                                outputParam.Direction = ParameterDirection.Output;
+                                cmd.Parameters.Add(outputParam);
+                            }
+                            else
+                            {
+                                cmd.Parameters.AddWithValue(p.Name, p.Value);
                             }
                         }
+                    }
 
-                        affectedRows = cmd.ExecuteNonQuery();
+                    affectedRows = cmd.ExecuteNonQuery();
 
-                        if (outputParam != null && outputParam.Value != DBNull.Value)
-                        {
-                            output = Convert.ToInt32(outputParam.Value);
-                        }
+                    if (outputParam != null && outputParam.Value != DBNull.Value)
+                    {
+                        output = Convert.ToInt32(outputParam.Value);
                     }
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error With the Data Base: " + ex.Message);
-                    throw;
-                }              
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error With the Data Base: " + ex.Message);
+                throw;
+            }
+            finally
+            {
+                if (_transaction == null) { _conn.Close(); }
+            }  
 
             return (affectedRows, output);
         }

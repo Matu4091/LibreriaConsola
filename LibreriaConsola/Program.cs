@@ -99,7 +99,7 @@ if (bookServ.UpdateBook(book))
 }
 else { Console.WriteLine("Error Updating the Book"); }
 
-if (bookServ.DeleteBook(book))
+if (bookServ.UnsubscribeBook(book))
 {
     Console.WriteLine("Book Deleted Succesfully");
 }
@@ -193,18 +193,12 @@ if (unitOfWork.DeleteInvoiceWithDetails(invoice2))
 }
 else { Console.WriteLine("Error Deleting the Invoice"); }
 
-if (bookServ.DeleteBook(book2))
+if (bookServ.UnsubscribeBook(book2))
 {
     Console.WriteLine("Book Deleted Succesfully");
 }
 else { Console.WriteLine("Error Deleting the Book"); }
-if (bookServ.DeleteBook(book3))
+if (bookServ.UnsubscribeBook(book3))
 {
     Console.WriteLine("Book Deleted Succesfully");
 }
-else { Console.WriteLine("Error Deleting the Book"); }
-if (bookServ.DeleteBook(book4))
-{
-    Console.WriteLine("Book Deleted Succesfully");
-}
-else { Console.WriteLine("Error Deleting the Book"); }

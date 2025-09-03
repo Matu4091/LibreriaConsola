@@ -15,16 +15,9 @@ namespace LibreriaConsola.data
             List<Parameter> parameters = new List<Parameter>();
             parameters.Add(new Parameter("@isbn", isbn));
 
-            var (affectedRows, newId) = DataHelper.GetInstance().ExecuteSPModify("ELIMINAR_LIBRO", parameters);
+            var (affectedRows, newId) = DataHelper.GetInstance().ExecuteSPModify("DAR_BAJA_LIBRO", parameters);
 
-            if (affectedRows > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return affectedRows > 0;
         }
 
         public List<Book>? GetAll()
@@ -95,14 +88,7 @@ namespace LibreriaConsola.data
 
             var (affectedRows, newId) = DataHelper.GetInstance().ExecuteSPModify("MODIFICAR_LIBROS", parameters);
 
-            if (affectedRows > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }            
+            return affectedRows > 0;          
         }
     }
 }

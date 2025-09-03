@@ -60,7 +60,7 @@ namespace LibreriaConsola.services
             }
         }
 
-        public bool DeleteBook(Book b)
+        public bool UnsubscribeBook(Book b)
         {
             if (!ValidateExisting(b.Isbn))
             {

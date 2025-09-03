@@ -3,44 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\services\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\services\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\data\\invoice_detailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\data\\invoice_detailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\data\\datahelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\data\\datahelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\data\\invoicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\data\\invoicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\services\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\services\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\domain\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\domain\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\data\\invoice_detailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\data\\invoice_detailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\domain\\invoice_details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\domain\\invoice_details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\data\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\data\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\data\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\data\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\data\\datahelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\data\\datahelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\data\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\data\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\domain\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|solutionrelative:libreriaconsola\\domain\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A4D6D85-70D3-4413-9330-0262FBADDB7C}|LibreriaConsola\\LibreriaConsola.csproj|c:\\users\\usuario\\desktop\\utn tup\\programacion ii\\unidad 1\\proyectos\\libreriaconsola\\libreriaconsola\\services\\payment_methodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,73 +70,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\services\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "LibreriaConsola\\services\\UnitOfWork.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\services\\UnitOfWork.cs",
-              "RelativeToolTip": "LibreriaConsola\\services\\UnitOfWork.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAApwDUAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T21:14:18.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\Program.cs",
-              "RelativeDocumentMoniker": "LibreriaConsola\\Program.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\Program.cs",
-              "RelativeToolTip": "LibreriaConsola\\Program.cs",
-              "ViewState": "AgIAALkAAAAAAAAAAAAwwM0AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T15:38:59.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Invoice_DetailsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\Invoice_DetailsRepository.cs",
-              "RelativeDocumentMoniker": "LibreriaConsola\\data\\Invoice_DetailsRepository.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\Invoice_DetailsRepository.cs",
-              "RelativeToolTip": "LibreriaConsola\\data\\Invoice_DetailsRepository.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAQwBwAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T19:08:25.677Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Invoice.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\domain\\Invoice.cs",
-              "RelativeDocumentMoniker": "LibreriaConsola\\domain\\Invoice.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\domain\\Invoice.cs",
-              "RelativeToolTip": "LibreriaConsola\\domain\\Invoice.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA3wCYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T17:04:49.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BookService.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\services\\BookService.cs",
-              "RelativeDocumentMoniker": "LibreriaConsola\\services\\BookService.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\services\\BookService.cs",
-              "RelativeToolTip": "LibreriaConsola\\services\\BookService.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAIAwwEIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T14:55:52.038Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -145,59 +80,126 @@
               "RelativeDocumentMoniker": "LibreriaConsola\\data\\InvoiceRepository.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\InvoiceRepository.cs",
               "RelativeToolTip": "LibreriaConsola\\data\\InvoiceRepository.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAuwB4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-29T19:07:55.84Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
+              "Title": "Invoice_DetailsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\Invoice_DetailsRepository.cs",
+              "RelativeDocumentMoniker": "LibreriaConsola\\data\\Invoice_DetailsRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\Invoice_DetailsRepository.cs",
+              "RelativeToolTip": "LibreriaConsola\\data\\Invoice_DetailsRepository.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAAEsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T19:08:25.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\services\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "LibreriaConsola\\services\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\services\\UnitOfWork.cs",
+              "RelativeToolTip": "LibreriaConsola\\services\\UnitOfWork.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAmwBcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T21:14:18.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\Program.cs",
+              "RelativeDocumentMoniker": "LibreriaConsola\\Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\Program.cs",
+              "RelativeToolTip": "LibreriaConsola\\Program.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAQwGUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T15:38:59.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\DataHelper.cs",
+              "RelativeDocumentMoniker": "LibreriaConsola\\data\\DataHelper.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\DataHelper.cs",
+              "RelativeToolTip": "LibreriaConsola\\data\\DataHelper.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAAAJEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T17:02:04.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Invoice_Details.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\domain\\Invoice_Details.cs",
               "RelativeDocumentMoniker": "LibreriaConsola\\domain\\Invoice_Details.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\domain\\Invoice_Details.cs",
               "RelativeToolTip": "LibreriaConsola\\domain\\Invoice_Details.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAIA7wB8AAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAlwB8AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-27T17:05:02.275Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\IRepository.cs",
-              "RelativeDocumentMoniker": "LibreriaConsola\\data\\IRepository.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\IRepository.cs",
-              "RelativeToolTip": "LibreriaConsola\\data\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\services\\BookService.cs",
+              "RelativeDocumentMoniker": "LibreriaConsola\\services\\BookService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\services\\BookService.cs",
+              "RelativeToolTip": "LibreriaConsola\\services\\BookService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAhwEIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T17:43:35.178Z"
+              "WhenOpened": "2025-08-28T14:55:52.038Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "BookRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\BookRepository.cs",
               "RelativeDocumentMoniker": "LibreriaConsola\\data\\BookRepository.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\BookRepository.cs",
               "RelativeToolTip": "LibreriaConsola\\data\\BookRepository.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwF8AAABxAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAgwFoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T14:55:43.944Z"
+              "WhenOpened": "2025-08-28T14:55:43.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\IRepository.cs",
+              "RelativeDocumentMoniker": "LibreriaConsola\\data\\IRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\IRepository.cs",
+              "RelativeToolTip": "LibreriaConsola\\data\\IRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAewA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T17:43:35.178Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "DataHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\DataHelper.cs",
-              "RelativeDocumentMoniker": "LibreriaConsola\\data\\DataHelper.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\data\\DataHelper.cs",
-              "RelativeToolTip": "LibreriaConsola\\data\\DataHelper.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAiwGAAAAA+AAAAAAAAAA==",
+              "Title": "Invoice.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\domain\\Invoice.cs",
+              "RelativeDocumentMoniker": "LibreriaConsola\\domain\\Invoice.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\UTN TUP\\Programacion II\\Unidad 1\\Proyectos\\LibreriaConsola\\LibreriaConsola\\domain\\Invoice.cs",
+              "RelativeToolTip": "LibreriaConsola\\domain\\Invoice.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA3wCYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T17:02:04.178Z"
+              "WhenOpened": "2025-08-27T17:04:49.986Z"
             },
             {
               "$type": "Document",

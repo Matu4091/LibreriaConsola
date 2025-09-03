@@ -9,13 +9,14 @@ isbn varchar(50),
 titulo varchar(100) not null,
 autor varchar(100) not null,
 nro_paginas int not null,
-stock int not null
+stock int not null,
+fecha_baja date null,
 CONSTRAINT PK_Libros PRIMARY KEY (isbn));
 GO
 
 CREATE TABLE Formas_Pagos(
 id_forma_pago int IDENTITY(1,1),
-forma_pago varchar(100) not null
+forma_pago varchar(100) not null,
 CONSTRAINT PK_Formas_Pagos PRIMARY KEY (id_forma_pago));
 GO
 
@@ -23,7 +24,7 @@ CREATE TABLE Facturas(
 nro_factura int IDENTITY(1,1),
 fecha date not null,
 id_forma_pago int not null,
-cliente varchar(100)
+cliente varchar(100),
 CONSTRAINT PK_Facturas PRIMARY KEY (nro_factura),
 CONSTRAINT FK_Facturas_Formas_Pagos FOREIGN KEY (id_forma_pago)
 REFERENCES Formas_Pagos (id_forma_pago));
@@ -33,7 +34,7 @@ CREATE TABLE Detalles_Facturas(
 id_detalle_factura int IDENTITY(1,1),
 isbn varchar(50) not null,
 cantidad int not null,
-nro_factura int not null
+nro_factura int not null,
 CONSTRAINT PK_Detalles_Facturas PRIMARY KEY (id_detalle_factura),
 CONSTRAINT FK_Detalles_Facturas_Libros FOREIGN KEY (isbn)
 REFERENCES Libros (isbn),
@@ -86,13 +87,14 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE ELIMINAR_LIBRO
+CREATE PROCEDURE DAR_BAJA_LIBRO
 @isbn varchar(50)
 AS
 BEGIN
-    DELETE Libros
+    UPDATE Libros 
+	SET fecha_baja = GETDATE()
 	WHERE isbn = @isbn
-END	 
+END	
 GO
 
 CREATE PROCEDURE OBTENER_FACTURAS
@@ -152,10 +154,20 @@ CREATE PROCEDURE ELIMINAR_FACTURA
 @nro_factura int
 AS
 BEGIN 
-    DELETE Detalles_Facturas
-	WHERE nro_factura = @nro_factura
-	DELETE Facturas 
-	WHERE nro_factura = @nro_factura
+    BEGIN TRY
+	    BEGIN TRANSACTION;
+
+		DELETE Detalles_Facturas
+	    WHERE nro_factura = @nro_factura
+	    DELETE Facturas 
+	    WHERE nro_factura = @nro_factura
+
+		COMMIT TRANSACTION;
+	END TRY
+	BEGIN CATCH
+	    ROLLBACK TRANSACTION;
+		THROW;
+    END CATCH
 END
 GO
 
